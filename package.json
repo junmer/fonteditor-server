@@ -1,0 +1,9 @@
+{
+  "name": "fonteditor-server",
+  "version": "0.0.1",
+  "description": "fonteditor-server",
+  "main": "app.js",
+  "devDependencies": {
+    "node-static": "^0.7.6"
+  }
+}
