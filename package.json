@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "fonteditor-server",
   "main": "app.js",
-  "devDependencies": {
+  "scripts": {
+    "build": "sh build.sh",
+    "start": "node app.js"
+  },
+  "dependencies": {
     "node-static": "^0.7.6"
   }
 }

@@ -13,10 +13,10 @@ route.add('/dwz', require('./route/dwz'));
 route.add('/', require('./route/static'));
 
 var env = process.env;
-var port = 8080;
 
-if(env.PORT) {
-    port = env.PORT;
-}
+var port = env.PORT || 8080;
+var host = env.HOST || '0.0.0.0';
 
-http.createServer(route.middleware()).listen(port, '0.0.0.0');
+http.createServer(route.middleware()).listen(port, host);
+
+console.log('server started at', host + ':' + port);
