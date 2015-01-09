@@ -2,17 +2,17 @@
 
 projectPath=$(cd "$(dirname "$0")"; pwd)
 
-# build fe
+# build fonteditor
 cd "${projectPath}/fonteditor"
 sh build.sh
 
 # mv to public
 cd $projectPath
 
-echo "rm old public ..."
-rm -rf "${projectPath}/public"
+echo "fonteditor: rm old public ..."
+rm -rf "${projectPath}/public/editor"
 
-echo "mv to public ..."
-mv fonteditor/release public
+echo "fonteditor: mv to public ..."
+mv fonteditor/release public/editor
 
-echo "done"
+echo "fonteditor: done"
